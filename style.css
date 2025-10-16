@@ -17,7 +17,7 @@ h2 { color: #48ffff; margin-top: 40px; }
 
 .form {
   background-color: #262a31;
-  border: 1px solid #51565e;
+  border: 2px solid #51565e;
   border-radius: 10px;
   padding: 40px;
 }
@@ -31,3 +31,14 @@ label {
     color: #e6ecf0; 
     margin-bottom: 6px; 
 }
+
+input, textarea {
+  width: 100%;
+  background-color: #48ffff;
+  color: #1c1d20;
+  border: 2px solid #51565e;
+  border-radius: 10px;
+  padding: 10px 15px;
+  outline: none;
+}
+input:focus, textarea:focus { border-color: #ffffff; }
