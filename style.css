@@ -14,3 +14,10 @@ body { background-color: #0f1115; color: #e6e7eb; }
 h1 { color: #48ffff; margin: 8px 0 40px; }
 
 h2 { color: #48ffff; margin-top: 40px; }
+
+.form {
+  background-color: #262a31;
+  border: 1px solid #51565e;
+  border-radius: 10px;
+  padding: 40px;
+}
