@@ -21,3 +21,13 @@ h2 { color: #48ffff; margin-top: 40px; }
   border-radius: 10px;
   padding: 40px;
 }
+
+.field { 
+    margin-bottom: 20px; 
+}
+
+label { 
+    display: block; 
+    color: #e6ecf0; 
+    margin-bottom: 6px; 
+}
