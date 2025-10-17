@@ -64,3 +64,25 @@ input:focus, textarea:focus { border-color: #ffffff; }
   padding: 7px 7px;
   font-size: 10px;
 }
+
+.listFeedback .item {
+  background-color: #14171c;
+  border: 1px solid #2a2f37;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.item .meta { 
+  font-size: 12px; 
+  color: #96a1b1; 
+  margin-bottom: 4px; 
+}
+
+.item a { color: #7fb2ff; 
+  text-decoration: none; 
+}
+
+.item a:hover { 
+  text-decoration: underline; 
+}

@@ -2,7 +2,7 @@
 
 
 const form = document.getElementById("feedback-form");
-const submittedFeedback = document.getElementById("listFeedback");
+const submittedFeedback = document.getElementById("feedback-display");
 const tooltip = document.getElementById("tooltip");
 const counter = document.getElementById("char-count");
 
@@ -38,9 +38,9 @@ form.addEventListener("mousemove", (e) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let name = form.name.value();
-  let email = form.email.value();
-  let text = form.comments.value();
+  let name = form.name.value.trim();
+  let email = form.email.value.trim();
+  let text = form.comments.value.trim();
 
   let ok = true;
   if (!name)  { setError("name", "This is a required field."); ok = false; }
@@ -48,9 +48,17 @@ form.addEventListener("submit", (e) => {
   if (!text)  { setError("comments", "This is a required field."); ok = false; }
   if (!ok) return;
 
+  let items = document.createElement("div");
+  items.className = "item";
+  items.innerHTML = `
+  <div><strong>${name}</strong> (${email})</div>
+  <p>${text}</p>
+  `;s
+  submittedFeedback.prepend(items); 
+
 });
 
 function setError(field, message) {
   let x = form.querySelector(`.error[data-error-for="${field}"]`);
-  if (x) el.textContent = message;
+  if (x) x.textContent = message;
 }
