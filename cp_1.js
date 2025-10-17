@@ -34,3 +34,23 @@ form.addEventListener("mousemove", (e) => {
   tooltip.style.left = (e.pageX + 5) + "px";
   tooltip.style.top = (e.pageY + 5) + "px";
 });
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let name = form.name.value();
+  let email = form.email.value();
+  let text = form.comments.value();
+
+  let ok = true;
+  if (!name)  { setError("name", "This is a required field."); ok = false; }
+  if (!email) { setError("email", "This is a required field."); ok = false; }
+  if (!text)  { setError("comments", "This is a required field."); ok = false; }
+  if (!ok) return;
+
+});
+
+function setError(field, message) {
+  let x = form.querySelector(`.error[data-error-for="${field}"]`);
+  if (x) el.textContent = message;
+}
