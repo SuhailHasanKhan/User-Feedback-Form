@@ -1,11 +1,9 @@
 // Coding Project 1
 
-
 const form = document.getElementById("feedback-form");
 const submittedFeedback = document.getElementById("feedback-display");
 const tooltip = document.getElementById("tooltip");
 const counter = document.getElementById("char-count");
-
 
 form.addEventListener("input", (e) => {
   let t = e.target;
@@ -48,13 +46,13 @@ form.addEventListener("submit", (e) => {
   if (!text)  { setError("comments", "This is a required field."); ok = false; }
   if (!ok) return;
 
-  let items = document.createElement("div");
-  items.className = "item";
-  items.innerHTML = `
-  <div><strong>${name}</strong> (${email})</div>
+  let item = document.createElement("div");
+  item.className = "item";
+  item.innerHTML = `
+  <div>${name} (${email})</div>
   <p>${text}</p>
-  `;s
-  submittedFeedback.prepend(items); 
+  `;
+  submittedFeedback.prepend(item); 
 
 });
 
@@ -62,3 +60,7 @@ function setError(field, message) {
   let x = form.querySelector(`.error[data-error-for="${field}"]`);
   if (x) x.textContent = message;
 }
+
+
+
+form.addEventListener("click", (e) => e.stopPropagation());
