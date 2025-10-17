@@ -55,3 +55,12 @@ input:focus, textarea:focus { border-color: #ffffff; }
     background-color: #94fcfc; 
 }
 
+#tooltip {
+  position: absolute;
+  background-color: #1b2028;
+  color: #ffffff;
+  border: 1px solid #2a2f37;
+  border-radius: 7px;
+  padding: 7px 7px;
+  font-size: 10px;
+}
