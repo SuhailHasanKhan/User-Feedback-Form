@@ -73,6 +73,6 @@ input:focus, textarea:focus { border-color: #ffffff; }
   margin-bottom: 12px;
 }
 
-.item .meta { font-size: 12px; color: #96a1b1; margin-bottom: 4px; }
+.item { font-size: 12px; color: #96a1b1; margin-bottom: 4px; }
 .item a { color: #7fb2ff; text-decoration: none; }
 .item a:hover { text-decoration: underline; }

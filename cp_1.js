@@ -62,5 +62,4 @@ function setError(field, message) {
 }
 
 
-
 form.addEventListener("click", (e) => e.stopPropagation());
