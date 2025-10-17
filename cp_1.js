@@ -13,3 +13,4 @@ form.addEventListener("input", (e) => {
     counter.textContent = `${t.value.length} characters`;
   }
 });
+
